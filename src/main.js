@@ -8,7 +8,12 @@ import { callbacksComponent } from './concepts/02-callbacks.js'
 //import { promeseComponent} from './concepts/03-promeses.js'
 //import { promeseComponent } from './concepts/03-promeses01.js'
 //import { promiseRace } from './concepts/04-promesa-race.js'
-import { asyncComponent } from './concepts/05-async.js'
+//import { asyncComponent } from './concepts/05-async.js'
+//import { asyncawaitComponent } from './concepts/06-async-await.js'
+//import { asyncAwait2Component } from './concepts/07-async-await.js';
+//import { forAwaitComponent } from './concepts/08-for-await.js';
+//import { generadorFuncionesComponent } from './concepts/09-genradores.js'
+import { generadorAsyncComponent } from './concepts/10-generators-async.js'
 
 document.querySelector('#app').innerHTML = `
  <div><img src="https://w0.peakpx.com/wallpaper/703/50/HD-wallpaper-dragon-fire-breath-fantasy-3440x1440-dragon.jpg"></div>
@@ -31,4 +36,9 @@ const elemento = document.querySelector('.card');
 //setupCounter(document.querySelector('#counter'))
 //callbacksComponent(elemento);
 //promiseRace(elemento);
-asyncComponent(elemento);
+//asyncComponent(elemento);
+//asyncawaitComponent(elemento);
+//asyncAwait2Component(elemento);
+//forAwaitComponent(elemento);
+//generadorFuncionesComponent(elemento);
+generadorAsyncComponent(elemento);

@@ -17,10 +17,15 @@ export const forAwaitComponent = async (element) => {
     const heroesId = heroes.map(valor => valor.id);
     
     const herosPromesas = getHeroesAsync(heroesId);
+    console.time('tiempo');
     for await(const heroe of herosPromesas){
+        await new Promise((resolve) => {
+            setTimeout(() => resolve(), 300)
+        });
         element.innerHTML += `${heroe.name} </br>`;
+        
     }
-    
+    console.timeEnd('tiempo');
 }
 
 /**
@@ -41,9 +46,9 @@ const getHeroesAsync = (heroIds) => {
 
 const getHeroAsync = async (id) => {
 
-    await new Promise((resolve) => {
+    /*await new Promise((resolve) => {
         setTimeout(() => resolve(), 1000)
-    });
+    });*/
 
     return heroes.find(hero => hero.id === id);
 }

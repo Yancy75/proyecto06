@@ -5,11 +5,11 @@
 
 export const asyncAwait2Component =  async (element) => {
     
-    console.time('inicio');
+    console.time('tiempo');
     /* llamado especial como las promesas son independientes se usa otro metodo */
-    /*const valor = await lentaPromesa();
+   /* const valor = await lentaPromesa();
     const valor1 = await mediaPromesa();
-    const valor2 = await rapidaPromesa();*/
+    const valor2 = await rapidaPromesa();
     /* los valores los tomo asi porque los estoy destructurando y la velocidad la da la promesa mas lenta porque todas entran en simultaneo */
    try {
        const [valor, valor1, valor2, valor3, valor4] = await Promise.all([
@@ -23,27 +23,27 @@ export const asyncAwait2Component =  async (element) => {
           valor: ${valor} </br>
           valor1: ${valor1} </br>
           valor2: ${valor2} </br>
-           valor1: ${valor3} </br>
+          valor1: ${valor3} </br>
           valor2: ${valor4} </br>
     `;
    } catch (error) {
         element.innerHTML = error;
    }
     
-   console.timeEnd('inicio');
+   console.timeEnd('tiempo');
 }
 
 const lentaPromesa = () => new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('Promesa lenta');
-    }, 1700)
+    }, 1500)
 
 });
 
 const mediaPromesa = () => new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('Promesa media');
-    }, 1500)
+    }, 1200)
 
 });
 

@@ -12,7 +12,7 @@ export const generadorAsyncComponent = async (element) => {
     let cartel;
     do{
         cartel = await heroeGenerador.next();
-        !cartel.done ? element.innerHTML = cartel.value : console.log(cartel.value);
+        !cartel.done ? element.innerHTML += cartel.value+"</br>" : console.log(cartel.value);
     }while(!cartel.done)
    
 }
@@ -30,6 +30,6 @@ const dormir = () =>{
     return new Promise((resolve)=>{
         setTimeout(() => {
             resolve();
-        }, 500);
+        }, 100);
     });
 }

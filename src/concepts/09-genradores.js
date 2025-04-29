@@ -13,7 +13,8 @@ export const generadorFuncionesComponent = (element) => {
     console.log(myPrimer.next());
     console.log(myPrimer.next());*/
    
-    const genId = idGenerador();
+    //const genId = idGenerador();
+    const genId = miPrimeraFuncionGeneradora();
 
     const boton= document.createElement('button');
     boton.innerHTML = 'Click me';
